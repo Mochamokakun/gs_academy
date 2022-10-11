@@ -1,11 +1,27 @@
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Your Name Portfolio Site</title>
+    <meta name="description" content="Your Name のPortfolio Siteです。">
+
+    <meta property="og:title" content="Your Name Portfolio Site">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="#">
+    <meta property="og:image" content="images/meta/ogimage.jpg">
+    <meta property="og:site_name" content="Your Name Portfolio Site">
+    <meta property="og:description" content="Your Name のPortfolio Siteです。">
+    
+    <meta name="format-detection" content="telephone=no">
+    
+    <link rel="apple-touch-icon" href="images/common/touch-icon.png">
+    <link rel="shortcut icon" href="images/common/favicon.ico">
 </head>
 <body>
+    <img src="images/header/bg-image.jpg" alt="ハムスターの画像">
+    <p>Hello,World</p>
     <header>
         <h1>Your Name Portfolio Web</h1>
 
@@ -38,19 +54,19 @@
                 <li>
                     <img src="images/works/work1.png" alt="オリジナルイラスト年賀状の画像"> 
                     <h3>オリジナルイラスト年賀状を作成しました！</h3>
-                    2018/02/06
+                    <p>2018/02/06</p>
                 </li>
 
                 <li>
                     <img src="images/works/work2.png" alt="マッサージ院のWebサイトのキャプチャ画像"> 
                     <h3>マッサージ院のWebサイトを作成しました!</h3>
-                    2018/01/01
+                    <p>2018/01/01</p>
                 </li>
 
                 <li>
                     <img src="images/works/work3.png" alt="自作ブログのキャプチャ画像">
                     <h3>自ら運営するブログのデザインから構築まで一通り担当し、作成しました！</h3>
-                    2018/01/01
+                    <p>2018/01/01</p>
                 </li>
             </ul>
             <a href="#">作品集をもっと見る</a> 
@@ -58,21 +74,21 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <form action="">
+            <form action="#" method="POST">
                 <dl>
                     <dt>お名前</dt>
-                    <dd><input type="text"></dd>
+                    <dd><input type="text" name="name" id="name"></dd>
                     <dt>メールアドレス</dt>
-                    <dd><input type="email" name="" id=""></dd>
+                    <dd><input type="email" name="email" id="email"></dd>
                     <dt>お問合せ内容</dt>
                     <dd>
-                        <input type="radio" name="" id=""> 制作のご依頼
-                        <input type="radio" name="" id="">イベント出演情報
-                        <input type="radio" name="" id="">その他
+                        <label for="making"><input type="radio" name="kind" id="making" value="制作のご依頼"> 制作のご依頼</label>
+                        <label for="event"><input type="radio" name="kind" id="event" value="イベント出演依頼">イベント出演情報</label>
+                        <label for="other"><input type="radio" name="kind" id="other" value="その他">その他</label>
                     </dd>
                     <dt>お問合せ詳細</dt>
                     <dd>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea name="detail" id="detail" cols="30" rows="10"></textarea>
                     </dd>
                 </dl>
                 <input type="submit" value="送信">
@@ -81,7 +97,7 @@
         </section>
     </main>
     <footer>
-        copyrights 2017-2018 Your Name All Rights Reserved.
+        <small>copyrights 2017-2018 Your Name All Rights Reserved.</small>
     </footer>
 
 
