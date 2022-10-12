@@ -1,1 +1,192 @@
 @charset "utf-8";
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    color: #333333;
+    font-family:"Open Sans",'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+    font-size: 1.6rem;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.text-center{
+    text-align: center;
+}
+/*headerに対しての適用*/
+.header{
+    background-color: #78d0fd;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+}
+
+.site-title{
+    font-size:2.4rem;
+    font-weight:bold;
+    color: #fff;
+}
+.nav-list{
+    display: flex;
+}
+.nav-item{
+    margin: 0 0 0 48px;
+}
+.nav-item>a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/*about 以下に適用*/
+.profile{
+    padding: 80px 0;
+}
+.profile-wrapper{
+    width: 560px;
+    margin: auto;
+}
+.profile__title{
+    margin: 0 0 40px;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.profile__eyecatch{
+    margin: 0 0 24px;
+}
+
+.profile__name{
+    margin: 0 0 40px;
+    font-size: 2.4rem;
+}
+
+.profile__text{
+    line-height: 2;
+    text-align: justify;
+}
+
+/*works 以下の適用*/
+.wrapper{
+    max-width: 1140px;
+    margin: auto;
+}
+
+.works{
+    padding: 80px 0;
+    background-color: #f4f4f4;
+}
+.works__title{
+    margin: 0 0 64px;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.works__list{
+    display: flex;
+    margin: 0 0 64px;
+}
+
+.works__item{
+    width: 33.333%;
+}
+.works__eyecatch{
+    margin: 0 0 24px;
+}
+
+.works__contents{
+    padding: 0 16px;
+}
+
+.works__heading{
+    margin: 0 0 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    line-height: 1.75;
+}
+
+
+.btn{
+    margin: auto;
+    padding: 21px 0;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: #1ab1ff;
+    color: #fff;
+    width: 214px;
+    display: block;
+}
+
+/*contactの適用*/
+.contact{
+    padding: 80px 0 64px;
+}
+.contact__title{
+    margin: 0 0 64px;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+.form-wrapper{
+    width: 560px;
+    margin: auto;
+}
+.form-inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 40px;
+}
+.form-title{
+    width: 152px;
+    margin: 0 20px 0 0;
+    padding: 8px 0 0 0;
+    font-weight: bold;
+    text-align: right;
+}
+.form-title.check-radio{
+    padding: 0;
+}
+.form-item{
+    width: 388px;
+    margin: 0 0 32px;
+}
+.form-parts{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border: solid 1px #c9c9c9;
+    font-size: 1.6rem;
+}
+.form-label{
+    margin: 0 16px 0 0;
+    font-size: 1.4rem;
+}
+input[type*="radio"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    margin: 0 10px 0 0;
+    border: solid 1px #a0a0a0;
+    border-radius: 50%;
+    vertical-align: -2px;
+}
+input[type*="radio"]:checked{
+    background-color: #a0a0a0;
+}
+.btn-submit{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+}
