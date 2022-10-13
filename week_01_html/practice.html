@@ -22,12 +22,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a15b928a47.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-    <img src="images/header/bg-image.jpg" alt="ハムスターの画像">
-    <p>Hello,World</p>
+    <div class="hero-image">
+        <img src="images/header/bg-image.jpg" alt="ハムスターの画像">
+        <p class="hero-image__text">Hello,World</p>
+    </div>
     <header class="header">
         <div class="wrapper header-wrapper">
             <h1 class="site-title"  >Your Name Portfolio Web</h1>
@@ -120,8 +126,9 @@
             </div>
         </section>
     </main>
-    <footer>
-        <small>copyrights 2017-2018 Your Name All Rights Reserved.</small>
+    <footer class="footer text-center">
+        <a href="#" class="btn-pagetop"><span class="fa fa-angle-up icon-up"></span></a>
+        <small class="copyrights">copyrights 2017-2018 Your Name All Rights Reserved.</small>
     </footer>
 
 
