@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../../00_memo"
+		},
+		{
+			"path": "../../../../../../Desktop/1015_html"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "1015_html"
+	}
+}
