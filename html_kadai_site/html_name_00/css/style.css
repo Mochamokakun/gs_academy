@@ -1,1 +1,248 @@
-/* ここから下に記載していく */
+/* 
+○構成
+・全体
+・Header
+・About
+・Course
+・News
+・Access
+・Contact
+・Footer
+*/
+
+/*
+○やるべきこと
+・CORSE部分のフレックスボックス対応
+・色/ボールド/font/文字サイズ/余白指定は後回しで、構造を先に対応する
+*/
+
+/* 全体　*/
+@charset "utf-8";
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    color: #333333;
+    font-family:"Open Sans",'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+    font-size: 1.6rem;
+    width: 1200px;
+    margin: auto;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+.text-center{
+    text-align: center;
+}
+/* Header */
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+.nav-list{
+    display: flex;
+}
+.nav-item{
+    margin: 0 0 0 50px;
+    font-size: 2.1rem;
+}
+.nav-item>a{
+    color: #333333;
+    text-transform: uppercase;
+}
+.top-image{
+    position: relative;
+}
+.top-text1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    color: #fff;
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+.top-text2{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    color: #fff;
+    font-size: 2.4rem;
+}
+/* About */
+.about{
+    width: 1200px;
+    margin:auto;
+    padding : 60px 0 60px 0;
+}
+.about-text-wrapper{
+    width: 600px;
+    margin: auto;
+    padding: 0 0 80px 0;
+}
+.about-title{
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 0 0 30px 0;
+    text-transform: uppercase;
+}
+.about-sub-title{
+    font-size: 1.8rem;
+    padding: 0 0 60px 0;
+}
+.about-text{
+    font-size: 1.2rem;
+    padding: 0 0 40px 0;
+    line-height: 2;
+}
+.about-image-wrapper{
+    max-width: 1200px;
+    margin: auto;
+}
+.about-image-list{
+    display: flex;
+}
+/* Course */
+.course{
+    margin: 0 0 60px 0;
+}
+.course-text-wrapper{
+    width: 600px;
+    margin: auto;
+    padding: 0 0 60px 0;
+}
+.course-title{
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 0 0 30px 0;
+    text-transform: uppercase;
+}
+.course-sub-title{
+    font-size: 1.8rem;
+    padding: 0 0 40px 0;
+    font-weight: bold;
+}
+.course-text{
+    font-size: 1.2rem;
+    line-height: 2;
+}
+/* News */
+.news{
+    max-width: 960px;
+    margin: auto;
+    padding: 0 0 60px 0;
+}
+.news-title{
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 0 0 30px 0;
+    text-transform: uppercase;
+}
+.news-sub-title{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.news-text{
+    font-size: 1.2rem;
+    line-height: 2;
+}
+.news-list{
+    display: flex;
+    padding: 60px 0 60px 0;
+}
+.news-item{
+    width: 33.333%;
+}
+.news-content{
+    width: 300px;
+}
+.news-date{
+    padding: 30px 0 24px 0;
+}
+.btn{
+    margin: auto ;
+    padding: 30px 0 30px 0;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: hwb(32 10% 0%);
+    color: #fff;
+    width: 300px;
+    display: block;
+}
+/* Access */
+.access{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 0 60px 0;
+}
+.access-title{
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 0 0 30px 0;
+    text-transform: uppercase;
+}
+.access-sub-title{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.access-wrapper{
+    width: 560px;
+    margin: auto;
+}
+.access-inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 40px;
+}
+.access-question{
+    width: 152px;
+    margin: 0 20px 0 0;
+    padding: 8px 0 0 0;
+    text-align: right;
+}
+/* Contact */
+.contact{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 0 140px 0;
+}
+.contact-title{
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 0 0 30px 0;
+    text-transform: uppercase;
+}
+.contact-text{
+    font-size: 1.2rem;
+    line-height: 2;
+}
+/* Footer */
+.footer{
+    position: relative;
+    padding: 24px 0;
+    background-color: #707070;
+}
+.footer.wrapper{
+    position: relative;
+}
+.btn-pagetop{
+    display: block;
+    position:absolute;
+    top: -78px;
+    right: 0%;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #707070
+    ;
+}
+.copyrights{
+    color: #fff;
+}
