@@ -109,6 +109,41 @@ img{
 .about-image-list{
     display: flex;
 }
+.slider {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+
+}
+.slider-item {
+    width: 300px;
+    float: left;
+}
+img{
+    width:100%;
+}
+.slider-inner {
+    width: 300%;
+    animation: slider 10s infinite ease;
+}
+
+@keyframes slider {
+	0% {
+	transform: translateX(0);
+	}
+	33% {
+	transform: translateX(-300px);
+	}
+	66% {
+	transform: translateX(-600px);
+	}
+	100% {
+	transform: translateX(0);
+	}
+}
+
+
 /* Course */
 .course{
     margin: 0 0 60px 0;
@@ -126,13 +161,36 @@ img{
 }
 .course-sub-title{
     font-size: 1.8rem;
-    padding: 0 0 40px 0;
+    padding: 120px 0 40px 0;
     font-weight: bold;
 }
 .course-text{
     font-size: 1.2rem;
     line-height: 2;
+    padding: 0 40px 0 40px;
 }
+/* 
+フレックスボックスの使い方
+https://niwaka-web.com/flexbox_reverse/ 
+*/
+.box {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.text {
+    width: 600px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: hsla(240, 12%, 89%, 0.64);
+}
+.pict img {
+    width: 600px;
+}
+.box:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
 /* News */
 .news{
     max-width: 960px;
@@ -171,7 +229,7 @@ img{
     padding: 30px 0 30px 0;
     text-align: center;
     font-size: 1.8rem;
-    background-color: hwb(32 10% 0%);
+    background-color: rgb(255, 148, 26);
     color: #fff;
     width: 300px;
     display: block;
@@ -180,7 +238,8 @@ img{
 .access{
     max-width: 1200px;
     margin: auto;
-    padding: 0 0 60px 0;
+    padding: 60px 0 60px 0;
+    background-color: hsla(240, 12%, 89%, 0.64);
 }
 .access-title{
     font-size: 2.4rem;
@@ -191,27 +250,30 @@ img{
 .access-sub-title{
     font-size: 1.8rem;
     font-weight: bold;
+    padding: 0 0 30px 0;
+}
+.access-map{
+    width: 100%;
+    margin: auto;
+    padding: 0 0 30px 0;
 }
 .access-wrapper{
-    width: 560px;
+    width: 400px;
     margin: auto;
 }
-.access-inner{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 0 40px;
+.access-text{
+    text-align: left;
+    font-size: 1.2rem;
 }
-.access-question{
-    width: 152px;
-    margin: 0 20px 0 0;
-    padding: 8px 0 0 0;
-    text-align: right;
+.access-table-text{
+    width: 100px;
+    height: 50px;
 }
 /* Contact */
 .contact{
     max-width: 1200px;
     margin: auto;
-    padding: 0 0 140px 0;
+    padding: 60px 0 140px 0;
 }
 .contact-title{
     font-size: 2.4rem;
@@ -222,6 +284,43 @@ img{
 .contact-text{
     font-size: 1.2rem;
     line-height: 2;
+}
+.contact-form{
+    width: 600px;
+    margin: auto;
+    padding: 30px 0 30px 0;
+}
+.contact-form-table th,.contact-form-table td{
+    border:1px solid #333;
+    border-right: none;
+    border-left: none ;
+}
+.contact-form-table{
+    width: 640px;
+
+}
+.contact-form-table-label{
+    width: 240px;
+    text-align: left;
+    vertical-align:middle;
+    padding: 10px 0 10px 0;
+}
+.contact-checkbox{
+    display: block;
+    text-align: left;
+    padding: 0 0 10px 20px;
+}
+.contact-inputs{
+    width: 350px;
+    border: solid 1px #aaa;
+    border-radius:5px;
+    padding:5px;
+    vertical-align:middle;
+}
+.contact-select{
+    width: 350px;
+    padding:5px;
+    font-size: 2.4rem;
 }
 /* Footer */
 .footer{
