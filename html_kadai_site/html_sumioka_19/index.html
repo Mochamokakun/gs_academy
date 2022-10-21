@@ -1,13 +1,3 @@
-<!--
-○不明点
-・iframeでの地図の埋め込み
-・テキストの横並び表示
-・チェックボックスの複数選択
-・画像とテキストを入れ子で表示させる方法
--->
-
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <!-- 最初の設定は終わっています　必要な方は触ってください -->
@@ -78,7 +68,10 @@
         <div class="box">
           <div class="text">
             <h3 class="course-sub-title">本格的な農園を使った実地研修</h3>
-            <p class="course-text">チーズアカデミーでは、本格的な農園を使った実地研修を行うことができます。プロとして活躍するチーズ職人も使用するような、広大で環境も整った農園を余すところなく使い、卒業時には本格的なチーズを自分の力で作れる実践力の養成を目指します。</p>
+            <p class="course-text">
+              チーズアカデミーでは、本格的な農園を使った実地研修を行うことができます。
+              <br> プロとして活躍するチーズ職人も使用するような広大で環境も整った農園を余すところなく使い、卒業時には本格的なチーズを自分の力で作れる実践力の養成を目指します。
+            </p>
           </div>
           <div class="pict">
             <img src="img/course_01.jpg" alt="牧場画像">
@@ -88,14 +81,23 @@
         <div class="box">
           <div class="text">
             <h3 class="course-sub-title">必要な知識もしっかりと取得</h3>
-            <p class="course-text">チーズ作りには、しっかりとした食に関する知識が欠かせません。チーズアカデミーでは、一流講師陣による、チーズ作りに必要ないろはを余すところなく学べます。チーズそのものでなく、栄養学全般を学ぶことも可能ですので、チーズ以外への展開も夢ではないでしょう。</p>
+            <p class="course-text">
+              チーズ作りにはしっかりとした食に関する知識が欠かせません。
+              <br>チーズアカデミーでは一流講師陣によるチーズ作りに必要ないろはを余すところなく学べます。チーズそのものでなく、栄養学全般を学ぶことも可能ですので、
+              <br>チーズ以外への展開も夢ではないでしょう。
+            </p>
           </div>
           <div class="pict"><img src="img/course_02.jpg" alt="講師画像"></div>
         </div>
         <div class="box">
           <div class="text">
             <h3 class="course-sub-title">卒業制作はティスティング審査あり</h3>
-            <p class="course-text">チーズアカデミーでは最後の2ヶ月間で卒業制作を実施。卒業制作として、チーズ作りを実際に行います。卒業後、一般参加によるティスティング審査があるため、作り手の目線だけでなく、消費者の目線から、卒業制作作品としてのチーズを、しっかりと評価いただくことができます。</p>
+            <p class="course-text">
+              チーズアカデミーでは最後の2ヶ月間で卒業制作を実施。
+              <br>卒業制作として、チーズ作りを実際に行います。
+              <br>卒業後、一般参加によるティスティング審査があるため作り手の目線だけでなく、
+              <br>消費者の目線から、卒業制作作品としてのチーズを、しっかりと評価いただくことができます。
+            </p>
           </div>
           <div class="pict"><img src="img/course_03.jpg" alt="作成画像"></div>
         </div>
@@ -104,6 +106,8 @@
       <!--News部分-->
       <section id="news" class="news">
         <h2 class="news-title text-center">News</h2>
+        <h3 class="news-sub-title text-center">Twitter</h3>
+        <a class="twitter-timeline" data-height="600" href="https://twitter.com/gsacademy_tokyo?ref_src=twsrc%5Etfw">Tweets by gsacademy_tokyo</a> <script async src="https://platform.twitter.com/widgets.js"></script>
         <h3 class="news-sub-title text-center">ニュース</h3>
         <ul class="news-list">
           <li class="news-item">
@@ -169,29 +173,30 @@
       <!--Contact部分-->
       <section id="contact" class="contact">
         <h2 class="contact-title text-center">Contact</h2>
-          <p class="contact-text text-center">  説明会お申し込み・お問い合わせ</p>
+          <p class="contact-sub-title text-center">  説明会お申し込み・お問い合わせ</p>
           <p class="contact-text text-center">ぜひ1度、足を運んでみませんか。説明会は随時開催中。</p>
           <p class="contact-text text-center">その他、お問い合わせもお気軽にどうぞ。お待ちしております。</p>
-          <p class="contact-text text-center">※チーズアカデミーは実際には存在しません。間違っても問い合わせしないようお願いいたします。</p>
+          <p class="contact-text contact-text-alert text-center">※チーズアカデミーは実際には存在しません。間違っても問い合わせしないようお願いいたします。</p>
 
         <form action="#" method="post" class="contact-form text-center">
           <table class="contact-form-table text-center">
             <tr>
               <th class="contact-form-table-label"><label for="namae" class="contact-label">名前</label></th>
-              <td><input id="namae" class="contact-inputs" type="text" name="namae"></td>
+              <td><input id="namae" class="contact-inputs" type="text" name="namae" placeholder=" チーズ太郎"></td>
             </tr>
             <tr>
               <th class="contact-form-table-label"><label for="kana" class="contact-label">カナ</label></th>
-              <td><input id="kana" class="contact-inputs" type="text" name="kana"></td>
+              <td><input id="kana" class="contact-inputs" type="text" name="kana" placeholder=" チーズタロウ"></td>
             </tr>
             <tr>
               <th class="contact-form-table-label"><label for="email" class="contact-label">メールアドレス</label></th>
-              <td><input id="email" class="contact-inputs" type="email" name="email"></td>
+              <td><input id="email" class="contact-inputs" type="email" name="email" placeholder=" dummy@cheeseacademy.tokyo"></td>
             </tr>
             <tr>
               <th class="contact-form-table-label"><label for="known" class="contact-label">チーズアカデミーを知ったきっかけ</label></th>
               <td>
                 <select id="known" name="known-chance" class="contact-select">
+                  <option value="null">きっかけを選択</option>
                   <option value="google検索">google検索</option>
                   <option value="SNS">SNS</option>
                   <option value="紹介">紹介</option>
@@ -218,7 +223,7 @@
             </tr>
             <tr>
               <th class="contact-form-table-label"><label for="detail">詳細</label></th>
-              <td><textarea id="detail" name="detail" cols="30" rows="10" class="contact-inputs"></textarea></td>
+              <td><textarea id="detail" name="detail" cols="30" rows="10" placeholder=" なんでも質問して下さい！！！" class="contact-inputs"></textarea></td>
             </tr>
           </table>
           <input type="submit" value="送信" class="btn btn-submit">

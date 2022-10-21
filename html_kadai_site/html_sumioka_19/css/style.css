@@ -10,11 +10,6 @@
 ・Footer
 */
 
-/*
-○やるべきこと
-・CORSE部分のフレックスボックス対応
-・色/ボールド/font/文字サイズ/余白指定は後回しで、構造を先に対応する
-*/
 
 /* 全体　*/
 @charset "utf-8";
@@ -42,7 +37,7 @@ img{
 .header-wrapper{
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    height: 120px;
     align-items: center;
 }
 .nav-list{
@@ -55,6 +50,7 @@ img{
 .nav-item>a{
     color: #333333;
     text-transform: uppercase;
+    font-weight: bold;
 }
 .top-image{
     position: relative;
@@ -76,7 +72,13 @@ img{
     color: #fff;
     font-size: 2.4rem;
 }
-/* About */
+/* About 
+スライドショー
+https://web-camp.io/magazine/archives/80525
+
+※以下はｊｓ使うとブロックごとスクロールできるらしい。
+https://coco-factory.jp/ugokuweb/move02/6-1/
+*/
 .about{
     width: 1200px;
     margin:auto;
@@ -85,7 +87,7 @@ img{
 .about-text-wrapper{
     width: 600px;
     margin: auto;
-    padding: 0 0 80px 0;
+    padding: 0 0 30px 0;
 }
 .about-title{
     font-size: 2.4rem;
@@ -95,11 +97,12 @@ img{
 }
 .about-sub-title{
     font-size: 1.8rem;
-    padding: 0 0 60px 0;
+    font-weight: bold;
+    padding: 0 0 30px 0;
 }
 .about-text{
     font-size: 1.2rem;
-    padding: 0 0 40px 0;
+    padding: 0 0 20px 0;
     line-height: 2;
 }
 .about-image-wrapper{
@@ -110,7 +113,7 @@ img{
     display: flex;
 }
 .slider {
-    width: 300px;
+    width: 600px;
     height: 200px;
     overflow: hidden;
     margin: 0 auto;
@@ -217,6 +220,12 @@ https://niwaka-web.com/flexbox_reverse/
 }
 .news-item{
     width: 33.333%;
+    font-size: 1.2rem;
+
+}
+.news-item:hover{
+    opacity: 0.7;
+    cursor: pointer;
 }
 .news-content{
     width: 300px;
@@ -233,12 +242,20 @@ https://niwaka-web.com/flexbox_reverse/
     color: #fff;
     width: 300px;
     display: block;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.7;
+}
+.twitter-timeline{
+    border: #333;
+    padding: 30px 0 30px 0;
 }
 /* Access */
 .access{
     max-width: 1200px;
     margin: auto;
-    padding: 60px 0 60px 0;
+    padding: 60px 0 0 0;
     background-color: hsla(240, 12%, 89%, 0.64);
 }
 .access-title{
@@ -273,7 +290,7 @@ https://niwaka-web.com/flexbox_reverse/
 .contact{
     max-width: 1200px;
     margin: auto;
-    padding: 60px 0 140px 0;
+    padding: 60px 0 100px 0;
 }
 .contact-title{
     font-size: 2.4rem;
@@ -281,9 +298,18 @@ https://niwaka-web.com/flexbox_reverse/
     padding: 0 0 30px 0;
     text-transform: uppercase;
 }
+.contact-sub-title{
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0 0 30px 0;
+}
 .contact-text{
     font-size: 1.2rem;
     line-height: 2;
+}
+.contact-text-alert{
+    font-weight: bold;
+    color: #fa0404;
 }
 .contact-form{
     width: 600px;
@@ -294,10 +320,11 @@ https://niwaka-web.com/flexbox_reverse/
     border:1px solid #333;
     border-right: none;
     border-left: none ;
+    vertical-align:middle;
 }
 .contact-form-table{
-    width: 640px;
-
+    width: 660px;
+    font-size: 1.2rem;
 }
 .contact-form-table-label{
     width: 240px;
@@ -308,20 +335,20 @@ https://niwaka-web.com/flexbox_reverse/
 .contact-checkbox{
     display: block;
     text-align: left;
-    padding: 0 0 10px 20px;
+    padding: 10px 0 10px 30px;
 }
 .contact-inputs{
     width: 350px;
     border: solid 1px #aaa;
     border-radius:5px;
-    padding:5px;
-    vertical-align:middle;
+    padding: 5px 0 5px 0;
 }
 .contact-select{
     width: 350px;
     padding:5px;
     font-size: 2.4rem;
 }
+
 /* Footer */
 .footer{
     position: relative;
