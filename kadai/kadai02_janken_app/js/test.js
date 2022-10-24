@@ -1,23 +1,59 @@
 //演習jQuery
 //$→　jQueryを指している
-$(".a").on('click',function(){
-    var random = Math.floor(Math.random() * 5);
-    console.log(random, "ランダムな数字");
-    
+$("#gu_btn").on('click',function(){
+    var random = Math.floor(Math.random() * 3);    
     if (random === 0) {
-        console.log("大吉");
-        $(".a").text("大吉");
+        console.log("グー");
+        $("#user_hands").text("グー");
+        $("#pc_hands").text("グー");
+        $("#judgment").text("引き分け");
     } else if (random === 1) {
-        console.log("中吉");
-        $(".a").text("中吉");
+        console.log("チョキ");
+        $("#user_hands").text("グー");
+        $("#pc_hands").text("チョキ");
+        $("#judgment").text("負け");
     } else if (random === 2) {
-        console.log("小吉");
-        $(".a").text("小吉");
-    } else if (random === 3) {
-        console.log("吉");
-        $(".a").text("吉");
-    } else if (random === 4) {
-        console.log("末");
-        $(".a").text("末");
-    }
+        console.log("パー");
+        $("#user_hands").text("グー");
+        $("#pc_hands").text("パー");
+        $("#judgment").text("勝ち");
+    } 
+})
+$("#cho_btn").on('click',function(){
+    var random = Math.floor(Math.random() * 3);    
+    if (random === 0) {
+        console.log("グー");
+        $("#user_hands").text("チョキ");
+        $("#pc_hands").text("グー");
+        $("#judgment").text("負け");
+    } else if (random === 1) {
+        console.log("チョキ");
+        $("#user_hands").text("チョキ");
+        $("#pc_hands").text("チョキ");
+        $("#judgment").text("引き分け");
+    } else if (random === 2) {
+        console.log("パー");
+        $("#user_hands").text("チョキ");
+        $("#pc_hands").text("パー");
+        $("#judgment").text("勝ち");
+    } 
+})
+$("#par_btn").on('click',function(){
+    var random = Math.floor(Math.random() * 3);    
+    if (random === 0) {
+        console.log("グー");
+        $("#user_hands").text("パー");
+        $("#pc_hands").text("グー");
+        $("#judgment").text("勝ち");
+    } else if (random === 1) {
+        console.log("チョキ");
+        $("#user_hands").text("パー");
+        $("#pc_hands").text("チョキ");
+        $("#judgment").text("負け");
+    } else if (random === 2) {
+        console.log("パー");
+        $("#user_hands").text("パー");
+        $("#pc_hands").text("パー");
+        $("#judgment").text("引き分け");
+    } 
 }) 
