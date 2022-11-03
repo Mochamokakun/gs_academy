@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <script src="js/jquery-2.1.3.min.js"></script>
     <link rel="stylesheet" href="css/sample.css">
     <title>じゃんけん</title>
 </head>
@@ -17,13 +16,19 @@
 
     <main >
         <ul>
-            <li class="a" id="gu_btn">グー</li>
+            <li id="gu_btn">グー</li>
             <li id="cho_btn">チョキ</li>
             <li id="par_btn">パー</li>
         </ul>
         <div>あなたが出した手は？「<span id="user_hands">なに？</span>」</div>
         <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
         <div>勝敗:【<span id="judgment">???</span>】</div>
+        <ul>
+            <li id = result>結果をみる</li>
+            <li id = reset>リセットする</li>
+        </ul>
+        <div id="get_data"></div>
+
     </main>
 
     <!--必ずjQueryが先-->
