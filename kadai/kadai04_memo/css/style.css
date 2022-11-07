@@ -39,7 +39,7 @@ li{
 */
 
 #wrapper{
-	width:90%;
+	width:95%;
 	height:1000px;
 	margin:0 auto;
 }
@@ -53,7 +53,7 @@ li{
 	height:100%;
 	
 	float:left;/*D内で右周り*/
-	width:20%;/*Aの幅=親要素Dの幅75%の内75%*/
+	width:15%;/*Aの幅=親要素Dの幅75%の内75%*/
 }
 #title{
     margin:0 3%;
@@ -63,8 +63,8 @@ li{
     box-shadow: 3px 3px 3px 3px #555;
 }
 #document{
-    margin: 10px 3%;
-    width: 90%;
+    margin: 50px 3%;
+    width: 50%;
     height: 500px;
     font-size:80%;
     box-shadow: 3px 3px 3px 3px #555;
@@ -79,7 +79,7 @@ li{
 	height:100%;
 	
 	float:left;/*D内で左周り*/
-	width:50%;/*Bの幅=親要素Dの幅75%の内25%*/
+	width:60%;/*Bの幅=親要素Dの幅75%の内25%*/
 }
 
 #rightwrapper{
@@ -89,7 +89,7 @@ li{
 	background-color:#ffe9e2;
 	height:100%;
     float:left;/*D内で左周り*/
-	width:30%;/*Cの幅=100%-(D分の幅)=25%*/
+	width:20%;/*Cの幅=100%-(D分の幅)=25%*/
 }
 #key{
     margin:0 3%;
@@ -105,4 +105,4 @@ li{
     font-size:80%;
     box-shadow: 3px 3px 3px 3px #555;
     background-color:rgb(241, 239, 239);
-  }
+}
