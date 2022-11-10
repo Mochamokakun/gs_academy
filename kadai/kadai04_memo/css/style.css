@@ -1,13 +1,8 @@
 @charset "utf-8";
 
-header{
-    background-color: rgb(164, 37, 37);
-    text-align: center;
-    font-weight: bold;
-}
+
 ul{
     padding: 0;
-    border-top: 1px solid #000000;
     display:table;  /* 定義 */
     table-layout: fixed;
     width:96%;
@@ -22,6 +17,23 @@ li{
     display:table-cell;  /* 定義 */
     cursor: pointer;
     color:#0d7dfd;
+    border-radius: 10px; /*角丸*/
+
+}
+#memo_list{
+    width: 100%;
+    text-align:left;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: solid 1px #778ca3;
+}
+#memo_list tr:nth-child(2n+1) {
+    background: #e9faf9;
+}
+#memo_list th,#memo_list td {
+    padding: 5px 5px 5px 0px;
+    border-bottom: solid 1px #778ca3;
+    text-align: left;
 }
 
 .text_center{
@@ -37,11 +49,21 @@ li{
 ---
 ↓各セクションに対しての設定
 */
+header{
+    background-color: #1d1d1d;
+    text-align: center;
+    font-weight: bold;
+}
+.header_text{
+    font-weight: bold;
+    color: #fff;
+}
 
 #wrapper{
-	width:95%;
+	width: 100%;
 	height:1000px;
 	margin:0 auto;
+
 }
 
 
@@ -49,11 +71,10 @@ li{
 	/*文字、幅及び高さ、背景色の決定*/
 	text-align:center;
 	font-size:18px;
-	background-color:#ffffdb;
+	background-color:#ffffdbf7;
 	height:100%;
-	
 	float:left;/*D内で右周り*/
-	width:15%;/*Aの幅=親要素Dの幅75%の内75%*/
+	width:15%;
 }
 #title{
     margin:0 3%;
@@ -79,7 +100,7 @@ li{
 	height:100%;
 	
 	float:left;/*D内で左周り*/
-	width:60%;/*Bの幅=親要素Dの幅75%の内25%*/
+	width:60%;
 }
 
 #rightwrapper{
@@ -89,7 +110,8 @@ li{
 	background-color:#ffe9e2;
 	height:100%;
     float:left;/*D内で左周り*/
-	width:20%;/*Cの幅=100%-(D分の幅)=25%*/
+	width: 25%;
+    overflow: scroll;
 }
 #key{
     margin:0 3%;
