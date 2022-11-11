@@ -15,61 +15,52 @@
     <main>
         <div id="wrapper">
             <div id="leftwrapper">
-                <p>ドキュメントリスト</p>
-                <ul>
-                    <li>保存したドキュメントのタイトルを表示させたい</li>
-                    <li>タイトルをクリックすると､中央のページにドキュメントのデータが反映されるようにしたい</li>
-                    <li>リスト上から削除できるようにしたい｡</li>
-                    <li>リストを折りたたんでひょうじできるようにしたい｡</li>
+                <p>All Document</p>
+                <ul id="document_list">
                 </ul>
-                <table id="document_list"></table>
+                
             </div>
 
             <div id="centerwrapper">
-                <p class="text_left">動作</p>
-                <ul>
-                    <li>ローカルストレージでは対応出来ないので､DBを使って制御したい</li>
-                    <li>書いた瞬間からリアルタイムで上書きしてほしい</li>
-                    <li>ここを更に2分割して､左側に本文の見出しを反映されるようにしたい</li>
-                    <li>リッチなテキストエリアを更にリッチにして､noteみたいに自由にヘッダーをつけられるようにしたい｡</li>
-                </ul>
-                <ul>
-                    <li id="document_save">Save</li>
-                    <li id="document_clear">Clear</li>
-                </ul>
                 <p class="text_left">タイトル</p>
                 <input type="text" id="title">
                 <p class="text_left">本文</p>
                 <input type="hidden" value="" id="document" name="document">
-                <trix-editor input="document"></trix-editor>
+                <ul class="ul">
+                    <li id="document_save" class="li">Save</li>
+                    <li id="document_clear" class="li">Clear</li>
+                </ul>
+                <trix-editor input="document" id="document_area"></trix-editor>
             </div>
             
             <div id="rightwrapper">
-                <ul>
-                    <li>付箋を作ってはる挙動にしたい</li>
-                    <li>この領域だけ拡大して付箋を一覧で見れるようにしたい｡</li>
-                    <li>付箋を自由に移動させて見れるようにしたい</li>
-                </ul>
                 <p>タグ</p>
                 <input type="text" id="key">
                 <p>memo</p>
                 <textarea id="memo"></textarea>
-                <ul>
-                    <li id="save">Save</li>
-                    <li id="clear">Clear</li>
+                <ul class="ul"> 
+                    <li id="save" class="li">Save</li>
+                    <li id="clear" class="li">Clear</li>
                 </ul>
-                <table id="memo_list"></table>
+                <table id="memo_list">
+                    <tr>
+                        <th>タグ</th>
+                        <th>memo</th>
+                    </tr>
+                </table>
             </div>
-
         </div>
     </main>
+
+
+    <footer class="footer">
+        <div class="wrapper">
+        <small class="copyrights">copyrights 2022 Kohei Sumioka All RIghts Reserved.</small>
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/trix.js"></script>
-    <footer>
-        <small>G's</small>
-    </footer>
-
 </body>
 </html>
