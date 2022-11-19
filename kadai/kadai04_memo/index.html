@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>myMemoPad</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/trix.css" />
+</head>
+
+<body>
+    <header>
+        <h1 class="header_text">MemoPad(テーマ:思考の発散と収束を管理する)</h1>
+    </header>
+
+    <main>
+        <div id="wrapper">
+            <div id="leftwrapper">
+                <p>All Document</p>
+                <ul id="document_list">
+                </ul>
+                
+            </div>
+
+            <div id="centerwrapper">
+                <p class="text_left">タイトル</p>
+                <input type="text" id="title">
+                <p class="text_left">本文</p>
+                <input type="hidden" value="" id="document" name="document">
+                <ul class="ul">
+                    <li id="document_save" class="li">Save</li>
+                    <li id="document_clear" class="li">Clear</li>
+                </ul>
+                <trix-editor input="document" id="document_area"></trix-editor>
+            </div>
+            
+            <div id="rightwrapper">
+                <p>タグ</p>
+                <input type="text" id="key">
+                <p>memo</p>
+                <textarea id="memo"></textarea>
+                <ul class="ul"> 
+                    <li id="save" class="li">Save</li>
+                    <li id="clear" class="li">Clear</li>
+                </ul>
+                <table id="memo_list">
+                    <tr>
+                        <th>タグ</th>
+                        <th>memo</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="wrapper">
+        <small class="copyrights">copyrights 2022 Kohei Sumioka All RIghts Reserved.</small>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/trix.js"></script>
+</body>
+</html>

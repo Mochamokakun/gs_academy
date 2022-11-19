@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Firebase_version9_RealtimeDB(G'sACADEMY初学者用サンプル)</title>
+</head>
+<body>
+
+<!-- コンテンツ表示画面 -->
+
+<div>
+    <div> 名前：<input type="text" id="uname"> </div>
+    <div>
+        <textarea id="text" cols="30" rows="10"></textarea>
+        <button id="send">送信</button>
+    </div>
+    <div id="output" style="overflow: auto;height:300px"></div>
+</div>
+<!--/ コンテンツ表示画面 -->
+
+
+
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- JQuery -->
+
+
+<!--** 以下Firebase **-->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+    import { getDatabase, ref, push, set, onChildAdded, remove,onChildRemoved } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyCYU9ot_fp1Cow7E1tdKRxPtL0RArOURgI",
+        authDomain: "dev245-37f1b.firebaseapp.com",
+        projectId: "dev245-37f1b",
+        storageBucket: "dev245-37f1b.appspot.com",
+        messagingSenderId: "1049002727540",
+        appId: "1:1049002727540:web:0e6d331b8bbf72a4c55921",
+        measurementId: "G-SBLE49LHQZ"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db =getDatabase(app);
+    const dbRef=ref(db,"dev245");
+
+    //送信処理を記述
+    $("#send").on("click",function(){
+        const uname = $("#uname").val();
+        const text = $("#text").val();
+        
+        console.log(uname+text);
+        //送信イベンtの消さない
+    
+        //データの塊を作る｡msgとう名前で作る.unameというなまえ
+    
+        const msg={
+            uname: uname,
+            text: text,
+        }
+        const newPostRef = push( dbRef);
+        set(newPostRef,msg)
+
+        //送信後に入力欄を殻にする
+        $("#uname").val("");
+        $("#text").val(""); 
+        $("#uname").focus(); //カーソルが入力欄に入る
+    });
+
+    //受信処理を記述
+    onChildAdded(dbRef, function (data) {
+            // ここからが受信処理が始まります
+
+            // 登録されたデータを取得します🤗
+            const msg = data.val();
+            console.log(msg, '取得したデータの塊')
+            const key = data.key;
+            console.log(key, 'データの塊にアクセス')
+        
+            //es6のテンプレートリテラル
+            let h = `
+                <div class="msg">
+                    <p>${msg.uname}</p>
+                    <p>${msg.text}</p>
+                </div>    
+            `;
+            // htmlに埋め込みましょう🤗
+            // append();というjqueryのおまじないを使います
+            $("#output").append(h);
+        })
+
+        $("#output").function
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

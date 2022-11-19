@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+
+.ul{
+    padding: 0;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:96%;
+    font-size: 80%;
+    margin: 0 3%;
+    text-align: center;
+}
+.li{
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #fff;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+    color:#0d7dfd;
+    border-radius: 10px; /*角丸*/
+
+}
+#memo_list{
+    width: 100%;
+    text-align:left;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: solid 1px #778ca3;
+}
+#memo_list tr:nth-child(1) {
+    background: #a4a7a7;
+}
+#memo_list tr:nth-child(2n+3) {
+    background: #eaeded;
+}
+#memo_list th,#memo_list td {
+    padding: 5px 5px 5px 0px;
+    border-bottom: solid 1px #778ca3;
+    text-align: left;
+}
+
+.text_center{
+    text-align: center;
+}
+.text_left{
+    text-align: left;
+    font-weight: bold;
+}
+
+/*
+↑全体に対しての指定
+---
+↓各セクションに対しての設定
+*/
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+    background-color: #1d1d1d;
+    font-weight: bold;
+}
+.header_text{
+    font-weight: bold;
+    color: #fff;
+}
+
+#wrapper{
+	width: 100%;
+	height:1000px;
+}
+
+
+#leftwrapper{
+	/*文字、幅及び高さ、背景色の決定*/
+	text-align:left;
+	font-size:18px;
+    background-color: #1d1d1d;
+	height:100%;
+	float:left;/*D内で右周り*/
+	width:15%;
+    font-weight: bold;
+    color: #fff;
+}
+#title{
+    margin:0 3%;
+    width: 90%;
+    font-size:80%;
+    background-color: #fcfcfd;
+    box-shadow: 3px 3px 3px 3px #555;
+}
+#document{
+    margin: 50px 3%;
+    width: 50%;
+    height: 500px;
+    font-size:80%;
+    box-shadow: 3px 3px 3px 3px #555;
+    background-color:rgb(241, 239, 239);
+}
+#document_area{
+    overflow: scroll;
+    text-align: left;
+}
+#document_list{
+    border-top: solid 1px #778ca3;
+    margin: 5px 5px 20px 20px;
+}
+
+#document_list li{
+    padding: 5px 5px 5px 0px;
+    border-bottom: solid 1px #778ca3;
+    text-align: left;
+}
+
+#centerwrapper{
+	/*文字、幅及び高さ、背景色の決定*/
+	text-align:center;
+	font-size:18px;
+	background-color:#aae4ff;
+	height:100%;
+	
+	float:left;/*D内で左周り*/
+	width:60%;
+}
+
+#rightwrapper{
+	/*文字、幅及び高さ、背景色の決定*/
+	text-align:left;
+	font-size:18px;
+	background-color:#ffe9e2;
+	height:100%;
+    float:left;/*D内で左周り*/
+	width: 25%;
+    overflow: scroll;
+}
+#key{
+    margin:0 3%;
+    width: 90%;
+    font-size:80%;
+    background-color: #fcfcfd;
+    box-shadow: 3px 3px 3px 3px #555;
+}
+#memo{
+    margin: 10px 3%;
+    width: 90%;
+    height: 100px;
+    font-size:80%;
+    box-shadow: 3px 3px 3px 3px #555;
+    background-color:rgb(241, 239, 239);
+}
+
+.footer{
+    position: relative;
+    padding: 24px 0;
+    background-color: #1d1d1d;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+.footer.wrapper{
+    position: relative;
+}
+

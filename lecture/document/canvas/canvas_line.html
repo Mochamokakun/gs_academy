@@ -19,7 +19,7 @@
         ctx.lineWidth = 10;
         //線の端の形状
         //http://www.html5.jp/canvas/ref/property/lineCap.html
-        ctx.lineCap = 'square'; //round=丸い,square=四角い,butt=ラインキャップなし
+        ctx.lineCap = 'round'; //round=丸い,square=四角い,butt=ラインキャップなし
         //パスの開始
         ctx.beginPath();
         //始点
@@ -27,7 +27,7 @@
         ctx.moveTo(20, 0);
         //終点
         //http://www.html5.jp/canvas/ref/method/lineTo.html
-        ctx.lineTo(100, 0);
+        ctx.lineTo(100, 100);
         //描画
         ctx.stroke();
         //パスを閉じる

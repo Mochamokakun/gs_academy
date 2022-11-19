@@ -25,13 +25,15 @@
         ctx.fillStyle = "#f00";
 
         //線の太さ
-        ctx.lineWidth = 5;
+        ctx.lineWidth = 100;
+        ctx.strokeStyle="#777";
 
         //円の設定（X中心軸,Y中心軸、半径、円のスタート度、円のエンド度、回転）
         //ctx.arc(100, 100, 50, 0, Math.PI, false); // full circle
         ctx.arc(100, 100, 50, 0, Math.PI * 2, false); // full circle
 
         //描画
+        ctx.stroke();
         ctx.fill();
     </script>
 </body>
