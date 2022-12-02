@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Map&amp;Geolocation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- MapArea -->
+  <div id="view"> ここがView</div>
+  <div class="directionsContainer">
+    <div id="directionsPanel"></div>
+    <div id="directionsItinerary"></div>
+  </div>  
+  <div id="myMap">ここがマップ</div>
+  <!-- /MapArea -->
+
+  <!-- jQuery&GoogleMapsAPI -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AlrxeTCIDM3Y7rWvI9hyerZ-LAXE29S3dlY89r-iAKDaEkX851ka2V0nvNc3tIiB' async defer></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/BmapQuery.js"></script>
+
+</body>
+
+</html>
