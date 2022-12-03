@@ -5,7 +5,9 @@ let map;
 
 function mapsInit(position) {
     const lat = position.coords.latitude;
-    const lon = position.coords.longitude;  
+    console.log(lat);
+    const lon = position.coords.longitude;
+    console.log(lat)  
     map = new Microsoft.Maps.Map('#myMap', {
             center: new Microsoft.Maps.Location(lat, lon), 
             mapTypeId: Microsoft.Maps.MapTypeId.load, 
@@ -15,10 +17,11 @@ function mapsInit(position) {
 
     Microsoft.Maps.loadModule('Microsoft.Maps.Directions', function () {
         directionsManager = new Microsoft.Maps.Directions.DirectionsManager(map);
-        directionsManager.setRenderOptions({itineraryContainer:'#directionsItinerary'});
+        directionsManager.setRenderOptions({itineraryContainer:'directionsItinerary'});
         directionsManager.showInputPanel('directionsPanel');
     });
 };
+
 function pushpin(la,lo,now){
     let location = new Microsoft.Maps.Location(la,lo)
     let pin = new Microsoft.Maps.Pushpin(location, {
