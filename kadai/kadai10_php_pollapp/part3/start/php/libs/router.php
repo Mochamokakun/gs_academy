@@ -18,10 +18,9 @@ function route($rpath, $method) {
             return;
         }
 
-        // echo $rpath;
         require_once $targetFile;
-
-        $rpath = str_replace('/','\\',$rpath);
+        
+        $rpath = str_replace('/', '\\', $rpath);
         $fn = "\\controller\\{$rpath}\\{$method}";
 
         $fn();
@@ -30,7 +29,7 @@ function route($rpath, $method) {
 
         Msg::push(Msg::DEBUG, $e->getMessage());
         Msg::push(Msg::ERROR, '何かがおかしいようです。。');
-        require_once SOURCE_BASE . "views/404.php";
+        redirect('404');
         
     }
 

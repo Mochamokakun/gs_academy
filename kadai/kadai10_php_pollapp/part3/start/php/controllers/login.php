@@ -7,7 +7,7 @@ use model\UserModel;
 
 function get() {
 
-
+    
     \view\login\index();
 
 }

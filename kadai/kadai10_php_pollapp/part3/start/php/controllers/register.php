@@ -10,6 +10,7 @@ function get()
 {
 
     \view\register\index();
+    
 }
 
 function post()
